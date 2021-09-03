@@ -1,10 +1,14 @@
 const fetch = require("node-fetch")
 const baseurl = "https://www.space-api.tk"
 
-export function password() {
+function password() {
     fetch(baseurl)
     .then(response => response.json())
     .then(res => {
-        return res;
+        return res.password;
     })
 }
+
+module.exports = {
+    password: password,
+};
