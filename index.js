@@ -1,12 +1,10 @@
-const fetch = require('node-fetch')
-const baseurl = 'https://www.space-api.tk/'
-async function request(endpoint, input='') {
-  const res = `${baseurl}${endpoint}?${input}`
-  return res;
-}
+const fetch = require("node-fetch")
+const baseurl = "https://www.space-api.tk"
 
-module.exports.password = async function() {
-  const res = await fetch(`${baseurl}password`)
-  const json = await res.json()
-  return json.password;
+export function password() {
+    fetch(baseurl)
+    .then(response => response.json())
+    .then(res => {
+        return res;
+    })
 }
