@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const baseurl = 'https://my-api.simonelacerra20.repl.co/'
+const baseurl = 'https://www.space-api.tk/'
 async function request(endpoint, input='') {
   const res = `${baseurl}${endpoint}?${input}`
   return res;
