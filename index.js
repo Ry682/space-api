@@ -5,7 +5,7 @@ async function request(endpoint, input='') {
   return res;
 }
 
-async function password() {
+module.exports.password = async function() {
   const res = await fetch(`${baseurl}password`)
   const json = await res.json()
   return json.password;
